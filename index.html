@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html id="html" lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/all.css/all.css">
+    <title>رواتب الموظفين</title>
+</head>
+<body>
+<div id="all_salary">
+    <div class="container">
+<div class="title">
+    <h1>كشف رواتب <span style="color: #898989;">الموظفين</span> </h1>
+   <div class="years_home">
+    <p id="years">0</p>
+    <span id="month">0</span>
+    <span id="day">0</span>
+   </div>
+</div>
+<div class="basic">
+    <div class="name_input">
+        <input type="text" id="emp_num" placeholder="اسم الموظف">
+        <input type="text" id="jop" placeholder=" المهنة">
+    </div>
+   
+    <div class="salary_input">
+        <input onkeyup="total_salary()" type="number" id="basic_salary" placeholder="الراتب ">
+        <input onkeyup="total_salary()" type="number" id="bonuses" placeholder="علاوات">
+        <input onkeyup="total_salary()"  type="number" id="Promotion" placeholder="ترقية">
+        <input onkeyup="total_salary()"  type="number" id="Loans" placeholder="سلف">
+        <input  onkeyup="total_salary()"  type="number" id="Absence" placeholder="غياب">
+        <span id="total"> 0  </span>
+    </div>
+  <div class="salary_categry" style="display: flex;  gap: 10px;">
+    <input type="number" id="count"   placeholder="عدد العاملين الدين تريد اضافتهم لسجلات" >
+    <input type="text " style="width:50%; ;"   id="catogery" placeholder="الرقم الوظيفي">
+  </div>
+    <button id="submit" type="submit">اضافة العاملين الي السجل</button>
+    <span onclick="deleted_all()" id="deleted_all">حذف جميع العاملين</span>
+    <div class="sweet_title">
+        <p >هل تريد حذف جميع العاملين</p>
+   <div class="home_span">
+    <span onclick="yes_all()" id="yes">نعم</span>
+    <span onclick="no_all()" id="no">لا</span>
+   </div>
+    </div>
+    <div class="Searching">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input  onclick="getserch_mood(this.id)" type="text" placeholder="اسم الموظف" id="search_name">
+        <input  onclick="getserch_mood(this.id)" type="number" placeholder=" الرقم الوظيفي" id="search_caregery">
+        <input  onkeyup="search_data(this.value)" type="text" placeholder='  البحت عن الموظفين' id="search">
+    </div>
+
+</div>
+<div class="body">
+<table >
+    <tr>
+        <th> الرقم التسلسلي</th>
+        <th> اسم الموظف </th>
+        <th>المهنة</th>
+        <th>الراتب</th>
+        <th>علاوة</th>
+        <th>ترقية</th>
+        <th>سلف</th>
+        <th>غياب</th>
+        <th>اجمالي الراتب</th>
+        <th>عدد الموظفين</th>
+        <th> الرقم الوظيفي</th>
+        <th>تعديل البيانات</th>
+        <th>حذف البيانات</th>
+    </tr>
+    <tbody  id="tbody">
+
+    </tbody>
+</table>
+</div>
+
+</div>
+</div>
+
+<div class="all ">
+<div class="sign_in">
+    <div class="logo">
+        <i class="fa-solid fa-user"></i>
+    </div>
+    <h1>تسجيل الدخول</h1>
+    <input  type="text" id="user_name" placeholder="اسم المستخدم">
+    <!-- <p class="sweet_alert">0</p> -->
+    <i class="fa fa-check u_check ture-cheak"></i>
+    <i class="fa-solid fa-xmark folse-cheak"></i>
+    <input type="password" id="password" placeholder="كلمة المرور ">
+    <!-- <p  class="sweet_alert_tow"> 0 </p> -->
+    <i class="fa-solid fa-check passtrue "></i>
+    <i class="fa-solid fa-xmark passFolse"></i>
+    <button id="save" class="btn-alt">تسجيل الدخول</button>
+    <a href="#"><p class="pass">هل نسيت كلمة المرور</p></a>
+    <i class="fa-regular fa-eye-slash" id="showId" onclick="showpassword()" ></i>
+</div>
+</div>
+
+<div class="login">
+    
+</div>
+
+
+<div class="ddd"></div>
+</body>
+<script src="assets/main.js"></script>
+</html>
